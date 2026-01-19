@@ -5,14 +5,14 @@ import { defineConfig } from "eslint/config";
 import prettier from "eslint-plugin-prettier";
 
 export default defineConfig([
-  {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
-    plugins: { js, prettier },
-    extends: ["js/recommended"],
-    languageOptions: { globals: globals.browser },
-    rules: {
-      "prettier/prettier": "error",
+    {
+        files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+        plugins: { js, prettier },
+        extends: ["js/recommended"],
+        languageOptions: { globals: globals.browser },
+        rules: {
+            "prettier/prettier": "error",
+        },
     },
-  },
-  tseslint.configs.recommended,
+    tseslint.configs.recommended,
 ]);
