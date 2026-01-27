@@ -11,7 +11,12 @@ export default defineConfig([
         extends: ["js/recommended"],
         languageOptions: { globals: globals.browser },
         rules: {
-            "prettier/prettier": "error",
+            "prettier/prettier": [
+                "error",
+                {
+                    endOfLine: "auto",
+                },
+            ],
         },
     },
     ...tseslint.configs.recommended,
